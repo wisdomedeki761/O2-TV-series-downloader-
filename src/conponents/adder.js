@@ -21,7 +21,7 @@ class Adder extends Component {
 
     handleChange(event) {
 
-        const value = Number.parseInt(event.target.value);
+        const value = Number.parseInt(event.target.value, 10);
 
         if (Number.isInteger(value) && value < 100 && value > this.props.default - 1) {
             this.props.onChange(value)
