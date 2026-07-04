@@ -5,29 +5,6 @@ import Adder from '../conponents/adder';
 import gitimg from '../assets/images/gitwhite.png'
 import MovieForm from '../conponents/movie-form';
 
-const Error = {
-    nameError: (name) => (
-        <div>
-            <b>{name}</b> is not available on <b>TvShows4Mobile.Com</b>.
-            The movie names are case sensitive, make sure the name is written as it appears on the website
-            (with the correct character case). Example: <b>Agents of SHIELD</b>.
-            visit <a href="https://tvshows4mobile.com" style={{ color: "#33C3F0" }}>tvshows4mobile.com</a> to get correct name.
-        </div>
-    ),
-    seasonError: (name, season) => (
-        <div>
-            <b>{name}</b> has a maximum of <b>{season}</b> season(s) on <b>TvShows4Mobile.Com</b>.
-            visit <a href={`https://tvshows4mobile.com/${name.replace(/\s+/g, "-")}`} style={{ color: "#33C3F0" }}>tvshows4mobile.com</a> to check the last season.
-        </div>
-    ),
-    episodeError: (name, season, episode) => (
-        <div>
-            <b>{name} - Season {season}</b> has a maximum of <b>{episode}</b> episodes(s) on <b>TvShows4Mobile.Com</b>.
-            visit <a href={`https://tvshows4mobile.com/${name.replace(/\s+/g, "-")}/Season-${season < 10 ? "0" + season : season}`} style={{ color: "#33C3F0" }}>tvshows4mobile.com</a> to check the last episode.
-        </div>
-    )
-}
-
 class Episodes extends Component {
 
     constructor(props) {
@@ -148,7 +125,6 @@ class Episodes extends Component {
     }
 
     onLoadFrame() {
-        this.frame.innerHTML
         console.log("loaded")
     }
 
@@ -238,7 +214,7 @@ class Episodes extends Component {
                                         //this.frame.src = `http://tvshows4mobile.com/${this.props.name.replace(/\s+/g, "-")}`
                                         this.displayEpisodes({})
                                     }}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#33C3F0" d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#33C3F0" d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 . . ."/></svg>
                                 </div>
                                 <a href="https://goody-h.github.io/O2#how-to-use" style={{
                                     color: "#33C3F0", display: "inline-block", cursor: "pointer", position: "absolute",
@@ -261,8 +237,8 @@ class Episodes extends Component {
                                                 </a>
                                             </button>
 
-                                            <div style={{ color: "rgb(131, 131, 131)", padding: "0px 20px", overflow: "hidden", margin: "5px 0px", height: "28px", lineHeight: "28px", display: "inline-block", backgroundColor: "white", width: "70%" }}>
-                                                {v.replace(/(http:\S+[0-9][0-9]\/)/, "").replace(/%20/g, " ")}
+                                            <div style={{ color: "rgb(131, 131, 131)", padding: "0px 20px", overflow: "hidden", margin: "5px 0px", height: "28px", lineHeight: "28px", display: "inline-block", width: "70%" }}>
+                                                {v.replace(/(http:\\S+[0-9][0-9]\\/)/, "").replace(/%20/g, " ")}
                                             </div>
                                         </div>
                                     );
