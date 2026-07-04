@@ -238,7 +238,7 @@ class Episodes extends Component {
                                             </button>
 
                                             <div style={{ color: "rgb(131, 131, 131)", padding: "0px 20px", overflow: "hidden", margin: "5px 0px", height: "28px", lineHeight: "28px", display: "inline-block", width: "70%" }}>
-                                                {v.replace(/(http:\\S+[0-9][0-9]\\/)/, "").replace(/%20/g, " ")}
+                                                {v.replace(/(http:\\S+[0-9][0-9]\/)/, "").replace(/%20/g, " ")}
                                             </div>
                                         </div>
                                     );
