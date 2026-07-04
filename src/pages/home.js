@@ -5,14 +5,6 @@ import twitter from '../assets/images/twitter_icon.svg';
 import linkedin from '../assets/images/linkedin_icon.svg';
 import MovieForm from '../conponents/movie-form';
 
-const hint = (
-    <div>
-        The movie names are case sensitive, make sure the name is written as it appears on <b>TvShows4Mobile.Com</b> or <b>O2TvSeries.Com</b>.
-        (with the correct character case). Example: <b>Agents of SHIELD</b>.
-        visit <a href="https://tvshows4mobile.com" style={{ color: "#33C3F0" }}>tvshows4mobile.com</a> to get correct name.
-    </div>
-)
-
 class Home extends Component {
 
     constructor(props) {
