@@ -42,7 +42,7 @@ function EpisodesRoute({path, list}) {
         var season = match.params["season"]
         var name = match.params["name"]
         if (season) {
-          season = Number.parseInt(season)
+          season = Number.parseInt(season, 10)
           if (Number.isNaN(season)) {
             season = null
           }
